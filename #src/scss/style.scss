@@ -193,15 +193,13 @@ body {
 	&__container {
 		@media (min-width: $md2+px) {
 			display: flex;
+			align-items: center;
 			flex-direction: row-reverse;
 		}
 	}
 	&__content {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
 		@media (min-width: $md2+px) {
-			@include adaptiv-value("min-width", 530, 0, 1);
+			@include adaptiv-value("min-width", 479, 0, 1);
 		}
 	}
 	&__title {
@@ -216,6 +214,7 @@ body {
 		}
 	}
 	&__image {
+		padding: 0px 40px 0px 0px;
 		@media (max-width: $md2+px) {
 			display: none;
 		}
@@ -245,7 +244,7 @@ body {
 }
 //====================================================================================================
 .feature-map {
-	&__body {
+	&__container {
 		@media (min-width: $md2+px) {
 			display: flex;
 			align-items: center;
@@ -253,9 +252,7 @@ body {
 	}
 	&__content {
 		@media (min-width: $md2+px) {
-			flex-shrink: 0;
-			flex-grow: 0;
-			@include adaptiv-value("flex-basis", 490, 0, 1);
+			@include adaptiv-value("min-width", 479, 0, 1);
 		}
 	}
 	&__title {
