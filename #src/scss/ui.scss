@@ -8,6 +8,11 @@
 		}
 	}
 }
+.title {
+	font-family: "Varela Round";
+	@include adaptiv-value("font-size", 42, 32, 1);
+	line-height: math.div(52, 42) * 100%;
+}
 .text {
 	color: $grayColor;
 	font-size: 20px;

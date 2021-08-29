@@ -99,6 +99,10 @@ body {
 		@include adaptiv-value("padding-bottom", 120, 40, 0);
 		border-bottom: 1px solid #f4f4f4;
 	}
+	&__feature-phone {
+		@include adaptiv-value("padding-top", 110, 40, 0);
+		@include adaptiv-value("padding-bottom", 150, 60, 0);
+	}
 }
 //===================================================================================================================================
 .intro {
@@ -177,6 +181,61 @@ body {
 			line-height: math.div(26, 18) * 100%;
 			&:not(:last-child) {
 				margin: 0px 0px math.div(20, 18) * 1em 0px;
+			}
+		}
+	}
+}
+//====================================================================================================
+.feature-phone {
+	&__container {
+		@media (min-width: $md2+px) {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		@media (min-width: $md2+px) {
+			@include adaptiv-value("min-width", 530, 0, 1);
+		}
+	}
+	&__title {
+		@include adaptiv-value("margin-bottom", 65, 25, 1);
+	}
+	&__text {
+		@include adaptiv-value("margin-bottom", 70, 35, 1);
+		p {
+			&:not(:last-child) {
+				margin: 0px 0px 30px 0px;
+			}
+		}
+	}
+	&__image {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.actions-feature {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	&__button {
+		padding: 0px 32px;
+		&:first-child {
+			flex-direction: row-reverse;
+			margin: 0px 20px 0px 0px;
+			padding: 0px 18px 0px 28px;
+			&::before {
+				padding: 0px 0px 0px 50px;
+			}
+		}
+		@media (max-width: $md4+px) {
+			flex: 1 1 100%;
+			&:first-child {
+				margin: 0px 0px 20px 0px;
 			}
 		}
 	}

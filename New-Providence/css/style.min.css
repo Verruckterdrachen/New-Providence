@@ -550,6 +550,17 @@ textarea.input {
   font-weight: 900;
 }
 
+.title {
+  font-family: "Varela Round";
+  font-size: 42px;
+  line-height: 123.8095238095%;
+}
+@media (max-width: 1200px) {
+  .title {
+    font-size: calc(32px + 10 * ((100vw - 320px) / 880));
+  }
+}
+
 .text {
   color: #8c8f94;
   font-size: 20px;
@@ -1033,6 +1044,10 @@ body.ie ._ibg img {
   padding-bottom: calc(40px + 80 * ((100vw - 320px) / 1280));
   border-bottom: 1px solid #f4f4f4;
 }
+.page__feature-phone {
+  padding-top: calc(40px + 70 * ((100vw - 320px) / 1280));
+  padding-bottom: calc(60px + 90 * ((100vw - 320px) / 1280));
+}
 
 .intro {
   display: flex;
@@ -1122,4 +1137,75 @@ body.ie ._ibg img {
 }
 .features__text p:not(:last-child) {
   margin: 0px 0px 1.1111111111em 0px;
+}
+
+@media (min-width: 991.98px) {
+  .feature-phone__container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.feature-phone__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 991.98px) {
+  .feature-phone__content {
+    min-width: 530px;
+  }
+}
+@media (min-width: 991.98px) and (max-width: 1200px) {
+  .feature-phone__content {
+    min-width: calc(0px + 530 * ((100vw - 320px) / 880));
+  }
+}
+.feature-phone__title {
+  margin-bottom: 65px;
+}
+@media (max-width: 1200px) {
+  .feature-phone__title {
+    margin-bottom: calc(25px + 40 * ((100vw - 320px) / 880));
+  }
+}
+.feature-phone__text {
+  margin-bottom: 70px;
+}
+@media (max-width: 1200px) {
+  .feature-phone__text {
+    margin-bottom: calc(35px + 35 * ((100vw - 320px) / 880));
+  }
+}
+.feature-phone__text p:not(:last-child) {
+  margin: 0px 0px 30px 0px;
+}
+@media (max-width: 991.98px) {
+  .feature-phone__image {
+    display: none;
+  }
+}
+
+.actions-feature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.actions-feature__button {
+  padding: 0px 32px;
+}
+.actions-feature__button:first-child {
+  flex-direction: row-reverse;
+  margin: 0px 20px 0px 0px;
+  padding: 0px 18px 0px 28px;
+}
+.actions-feature__button:first-child::before {
+  padding: 0px 0px 0px 50px;
+}
+@media (max-width: 479.98px) {
+  .actions-feature__button {
+    flex: 1 1 100%;
+  }
+  .actions-feature__button:first-child {
+    margin: 0px 0px 20px 0px;
+  }
 }
