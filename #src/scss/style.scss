@@ -88,7 +88,66 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+	&__intro {
+		padding: 180px 0px 0px 0px;
+		@media (max-width: $md2+px) {
+			padding: 100px 0px;
+		}
+	}
 }
 //===================================================================================================================================
+.intro {
+	display: flex;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: url("../img/intro/intro-bg.png") center / cover no-repeat;
+	&__container {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			justify-content: center;
+		}
+	}
+	&__body {
+		text-align: center;
+		max-width: 800px;
+	}
+	&__title {
+		font-family: "Varela Round";
+		@include adaptiv-value("font-size", 62, 42, 1);
+		line-height: math.div(72, 62) * 100%;
+		margin: 0px 0px math.div(25, 62) * 1em 0px;
+	}
+	&__text {
+		margin: 0px 0px math.div(55, 20) * 1em 0px;
+		@media (max-width: $md2+px) {
+			color: $mainColor;
+		}
+	}
+	&__button {
+		min-height: 48px;
+		padding: 0px 40px;
+		&::before {
+			font-size: 12px;
+			padding: 0px 10px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			background-color: #fff;
+		}
+	}
+	&__image {
+		position: absolute;
+		left: 50%;
+		bottom: -300px;
+		transform: translate(-50%, 0px);
+		@media screen and (max-width: $md2+px), screen and (max-height: 940px) {
+			display: none;
+		}
+	}
+}
+//====================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
