@@ -1048,6 +1048,9 @@ body.ie ._ibg img {
   padding-top: calc(40px + 70 * ((100vw - 320px) / 1280));
   padding-bottom: calc(60px + 90 * ((100vw - 320px) / 1280));
 }
+.page__feature-map {
+  padding-bottom: calc(60px + 120 * ((100vw - 320px) / 1280));
+}
 
 .intro {
   display: flex;
@@ -1106,7 +1109,7 @@ body.ie ._ibg img {
 .intro__image {
   position: absolute;
   left: 50%;
-  bottom: -300px;
+  bottom: -320px;
   transform: translate(-50%, 0px);
 }
 @media screen and (max-width: 991.98px), screen and (max-height: 940px) {
@@ -1207,5 +1210,77 @@ body.ie ._ibg img {
   }
   .actions-feature__button:first-child {
     margin: 0px 0px 20px 0px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .feature-map__body {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 991.98px) {
+  .feature-map__content {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 490px;
+  }
+}
+@media (min-width: 991.98px) and (max-width: 1200px) {
+  .feature-map__content {
+    flex-basis: calc(0px + 490 * ((100vw - 320px) / 880));
+  }
+}
+.feature-map__title {
+  margin-bottom: 45px;
+}
+@media (max-width: 1200px) {
+  .feature-map__title {
+    margin-bottom: calc(25px + 20 * ((100vw - 320px) / 880));
+  }
+}
+.feature-map__text {
+  margin: 0px 0px 55px 0px;
+}
+.feature-map__text p:not(:last-child) {
+  margin: 0px 0px 30px 0px;
+}
+.feature-map__image {
+  padding: 0px 0px 0px 60px;
+}
+@media (max-width: 991.98px) {
+  .feature-map__image {
+    display: none;
+  }
+}
+
+.partners-feature__title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 183.3333333333%;
+  margin: 0px 0px 1.6666666667em 0px;
+}
+.partners-feature__image {
+  display: inline-block;
+}
+.partners-feature__image:not(:last-child) {
+  margin: 0px 25px 0px 0px;
+}
+@media (max-width: 479.98px) {
+  .partners-feature__image {
+    display: block;
+  }
+  .partners-feature__image:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+}
+@media (any-hover: hover) {
+  .partners-feature__image img {
+    transition: all 0.2s ease 0s;
+    filter: grayscale(0);
+  }
+  .partners-feature__image:hover img {
+    filter: grayscale(1);
   }
 }

@@ -103,6 +103,9 @@ body {
 		@include adaptiv-value("padding-top", 110, 40, 0);
 		@include adaptiv-value("padding-bottom", 150, 60, 0);
 	}
+	&__feature-map {
+		@include adaptiv-value("padding-bottom", 180, 60, 0);
+	}
 }
 //===================================================================================================================================
 .intro {
@@ -150,7 +153,7 @@ body {
 	&__image {
 		position: absolute;
 		left: 50%;
-		bottom: -300px;
+		bottom: -320px;
 		transform: translate(-50%, 0px);
 		@media screen and (max-width: $md2+px), screen and (max-height: 940px) {
 			display: none;
@@ -241,5 +244,69 @@ body {
 	}
 }
 //====================================================================================================
+.feature-map {
+	&__body {
+		@media (min-width: $md2+px) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__content {
+		@media (min-width: $md2+px) {
+			flex-shrink: 0;
+			flex-grow: 0;
+			@include adaptiv-value("flex-basis", 490, 0, 1);
+		}
+	}
+	&__title {
+		@include adaptiv-value("margin-bottom", 45, 25, 1);
+	}
+	&__text {
+		margin: 0px 0px 55px 0px;
+		p {
+			&:not(:last-child) {
+				margin: 0px 0px 30px 0px;
+			}
+		}
+	}
+	&__image {
+		padding: 0px 0px 0px 60px;
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+.partners-feature {
+	&__title {
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 12px;
+		line-height: math.div(22, 12) * 100%;
+		margin: 0px 0px math.div(20, 12) * 1em 0px;
+	}
+	&__image {
+		display: inline-block;
+		&:not(:last-child) {
+			margin: 0px 25px 0px 0px;
+		}
+		@media (max-width: $md4+px) {
+			display: block;
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+		@media (any-hover: hover) {
+			img {
+				transition: all 0.2s ease 0s;
+				filter: grayscale(0);
+			}
+			&:hover {
+				img {
+					filter: grayscale(1);
+				}
+			}
+		}
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
