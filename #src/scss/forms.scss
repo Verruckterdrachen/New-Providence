@@ -13,7 +13,6 @@
 	&__error {
 	}
 }
-
 //</FORM>====================================================================================================
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
@@ -21,10 +20,11 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 21px;
-	padding: 0px 22px;
+	text-align: center;
+	padding: 0px 15px;
 	min-height: 42px;
 	color: #fff;
+	border-radius: 20px;
 	background-color: $blueColor;
 	transition: background-color 0.3s ease 0s;
 	&::before {
