@@ -1028,6 +1028,11 @@ body.ie ._ibg img {
     padding: 100px 0px;
   }
 }
+.page__features {
+  padding-top: calc(40px + 80 * ((100vw - 320px) / 1280));
+  padding-bottom: calc(40px + 80 * ((100vw - 320px) / 1280));
+  border-bottom: 1px solid #f4f4f4;
+}
 
 .intro {
   display: flex;
@@ -1093,4 +1098,28 @@ body.ie ._ibg img {
   .intro__image {
     display: none;
   }
+}
+
+.features__body {
+  display: grid;
+  column-gap: 159px;
+  row-gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+}
+.features__image {
+  margin: 0px 0px 35px 0px;
+}
+.features__title {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 130.7692307692%;
+  margin: 0px 0px 1.1538461538em 0px;
+}
+.features__text p {
+  color: #8c8f94;
+  font-size: 18px;
+  line-height: 144.4444444444%;
+}
+.features__text p:not(:last-child) {
+  margin: 0px 0px 1.1111111111em 0px;
 }
