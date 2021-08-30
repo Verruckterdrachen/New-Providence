@@ -110,6 +110,9 @@ body {
 		@include adaptiv-value("padding-top", 130, 40, 0);
 		@include adaptiv-value("padding-bottom", 110, 60, 0);
 	}
+	&__ready {
+		@include adaptiv-value("padding-bottom", 130, 60, 0);
+	}
 }
 //===================================================================================================================================
 .intro {
@@ -375,4 +378,76 @@ body {
 		}
 	}
 }
+//====================================================================================================
+.ready {
+	background-color: $lightColor;
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	&__head {
+		@include adaptiv-value("margin-bottom", 45, 25, 1);
+	}
+	&__suptitle {
+		font-size: 12px;
+		line-height: math.div(22, 12) * 100%;
+		color: rgba(#3a3d4b, 0.5);
+		text-transform: uppercase;
+		margin: 0px 0px math.div(25, 12) * 1em 0px;
+		span {
+			font-weight: 700;
+		}
+	}
+	&__title {
+		color: #3a3d4b;
+	}
+	&__bottom {
+		p {
+			text-transform: uppercase;
+			font-size: 12px;
+			line-height: math.div(22, 12) * 100%;
+			color: rgba(#3a3d4b, 0.3);
+			margin: 0px 0px math.div(15, 12) * 1em 0px;
+		}
+	}
+	&__button {
+		font-size: 24px;
+		min-height: 60px;
+		padding: 0px 30px;
+		border-radius: 30px;
+		&::before {
+			padding: 0px 15px 0px 0px;
+		}
+		.button__content {
+			font-size: 11px;
+			span {
+				font-size: 20px;
+			}
+		}
+	}
+}
+.form-ready {
+	@include adaptiv-value("margin-bottom", 60, 35, 1);
+	&__item {
+		@media (min-width: $md3+px) {
+			min-width: 562px;
+		}
+	}
+	&__input {
+		color: #3a3d4b;
+	}
+	&__button {
+		flex-direction: row-reverse;
+		&::before {
+			padding: 0px 0px 0px 15px;
+			@media (max-width: $md4+px) {
+				display: none;
+			}
+		}
+	}
+}
+//====================================================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
