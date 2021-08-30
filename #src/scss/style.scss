@@ -113,6 +113,10 @@ body {
 	&__ready {
 		@include adaptiv-value("padding-bottom", 130, 60, 0);
 	}
+	&__team {
+		@include adaptiv-value("padding-top", 20, 0, 0);
+		@include adaptiv-value("padding-bottom", 100, 40, 0);
+	}
 }
 //===================================================================================================================================
 .intro {
@@ -446,6 +450,109 @@ body {
 				display: none;
 			}
 		}
+	}
+}
+//====================================================================================================
+.team {
+	&__body {
+		max-width: 570px;
+		margin: 0px auto;
+	}
+}
+.slider-team-image {
+	position: relative;
+	&__body {
+		padding: 132px 0px 100px 0px;
+	}
+	&__slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 90px;
+	}
+	&__image {
+		width: 90px;
+		height: 100%;
+		border-radius: 50%;
+		overflow: hidden;
+		opacity: 0.2;
+		transition: all 1s ease 0s;
+		.swiper-slide-active &,
+		.swiper-slide-duplicate-active & {
+			opacity: 1;
+			transform: scale(1.444);
+			box-shadow: 14px 24px 40px 0px rgba(92, 95, 101, 0.28);
+		}
+	}
+}
+.slider-arrows {
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	width: calc(100% + 560px);
+	left: -280px;
+	transform: translate(0px, -50%);
+	@media (max-width: 1200px) {
+		width: calc(100% + 200px);
+		left: -100px;
+	}
+	@media (max-width: $md3+px) {
+		display: none;
+	}
+}
+.slider-arrow {
+	pointer-events: auto;
+	color: $grayColor;
+	font-size: 40px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $mainColor;
+		}
+	}
+	&_prev {
+		&::before {
+			transform: rotate(-180deg);
+		}
+	}
+}
+//============================================================================
+.slider-team-info {
+	&__slide {
+		text-align: center;
+	}
+	&__title {
+		@include adaptiv-value("font-size", 32, 26, 1);
+		line-height: math.div(38, 32) * 100%;
+		margin: 0px 0px math.div(45, 32) * 1em 0px;
+	}
+	&__text {
+		color: $grayColor;
+		font-size: 20px;
+		line-height: math.div(28, 20) * 100%;
+		margin: 0px 0px math.div(25, 20) * 1em 0px;
+	}
+	&__rate {
+		display: flex;
+		justify-content: center;
+		margin: 0px 0px 55px 0px;
+		span {
+			font-size: 20px;
+			color: #f2bc3b;
+			&:not(:last-child) {
+				margin: 0px 8px 0px 0px;
+			}
+		}
+	}
+	&__name {
+		font-weight: 900;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: math.div(22, 12) * 100%;
 	}
 }
 //====================================================================================================
