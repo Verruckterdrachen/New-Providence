@@ -1121,6 +1121,10 @@ body.ie ._ibg img {
   padding-top: calc(0px + 20 * ((100vw - 320px) / 1280));
   padding-bottom: calc(40px + 60 * ((100vw - 320px) / 1280));
 }
+.page__plan {
+  padding-top: calc(40px + 140 * ((100vw - 320px) / 1280));
+  padding-bottom: calc(40px + 140 * ((100vw - 320px) / 1280));
+}
 
 .intro {
   display: flex;
@@ -1603,4 +1607,215 @@ body.ie ._ibg img {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 183.3333333333%;
+}
+
+.plan {
+  background-color: #f4f4f5;
+}
+@media (min-width: 1050px) {
+  .plan__body {
+    display: grid;
+    align-items: center;
+    column-gap: 98px;
+    grid-template-columns: 1fr 680px;
+  }
+}
+@media (min-width: 1050px) and (max-width: 1200px) {
+  .plan__body {
+    column-gap: calc(0px + 98 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1050px) {
+  .plan__content {
+    margin: 0px 0px 40px 0px;
+  }
+}
+.plan__title {
+  margin: 0px 0px 1.3095238095em 0px;
+}
+.plan__text {
+  color: #8c8f94;
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0px 0px 1.75em 0px;
+}
+.plan__team {
+  color: #8c8f94;
+  font-size: 14px;
+  line-height: 171.4285714286%;
+}
+.plan__team a {
+  color: #267df4;
+  text-decoration: underline;
+}
+.plan__cards {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 1050px) {
+  .plan__cards {
+    align-items: stretch;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 600px) {
+  .plan__cards {
+    flex-wrap: wrap;
+  }
+}
+
+.checkbox-plan {
+  max-width: 260px;
+  margin-bottom: 70px;
+}
+@media (max-width: 1200px) {
+  .checkbox-plan {
+    margin-bottom: calc(30px + 40 * ((100vw - 320px) / 880));
+  }
+}
+.checkbox-plan__change {
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0px 0px 1em 0px;
+}
+.checkbox-plan__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #bfc1c2;
+  border-radius: 25px;
+  height: 50px;
+  padding: 3px;
+  position: relative;
+}
+.checkbox-plan__input {
+  display: none;
+}
+.checkbox-plan__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: rgba(38, 39, 45, 0.4);
+  transition: all 0.3s ease 0s;
+}
+.checkbox-plan__label._active {
+  color: #26272d;
+}
+.checkbox-plan__bg {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 50%;
+  height: calc(100% - 6px);
+  border-radius: 21px;
+  background-color: #fff;
+  box-shadow: 2px 5px 20px 0px rgba(61, 61, 62, 0.15), 10px 28px 50px 0px rgba(92, 95, 101, 0.28);
+  transition: all 0.2s ease 0s;
+}
+.checkbox-plan__bg._active {
+  left: calc(50% - 3px);
+}
+
+.card-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 340px;
+  min-height: 510px;
+  background-color: #ebebed;
+  border-radius: 10px;
+  padding: 35px 50px 50px 50px;
+  transition: all 0.3s ease 0s;
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .card-plan {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .card-plan {
+    flex: 1 1 100%;
+  }
+  .card-plan:first-child {
+    margin: 0px 0px 30px 0px;
+  }
+}
+.card-plan._active {
+  background-color: #fff;
+  box-shadow: 10px 28px 50px 0px rgba(92, 95, 101, 0.2);
+}
+.card-plan__head {
+  text-align: center;
+  margin: 0px 0px 55px 0px;
+}
+.card-plan__name {
+  font-size: 32px;
+  line-height: 118.75%;
+  margin: 0px 0px 0.78125em 0px;
+}
+.card-plan__price {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 28px;
+  padding: 0px 15px;
+  text-transform: uppercase;
+  border: 1px solid #c4c4c6;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 200%;
+}
+.card-plan__info {
+  flex: 1 1 auto;
+  margin: 0px 0px 45px 0px;
+}
+.card-plan__text {
+  max-width: 180px;
+  color: #8c8f94;
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0px auto 1.75em auto;
+}
+.card-plan__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 0px;
+  line-height: 150%;
+}
+.card-plan__item::before {
+  padding: 0px 10px 0px 0px;
+  color: #6fc754;
+}
+.card-plan__item:not(:last-child) {
+  margin: 0px 0px 0.3125em 0px;
+}
+.card-plan__button {
+  min-height: 42px;
+  padding: 0px 60px;
+  border-radius: 21px;
+  color: #267df4;
+  border: 1px solid #267df4;
+}
+@media (max-width: 600px) {
+  .card-plan__button {
+    width: 100%;
+  }
+}
+@media (any-hover: hover) {
+  .card-plan__button:hover {
+    color: #fff;
+    background-color: #267df4;
+  }
 }

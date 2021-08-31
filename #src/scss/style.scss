@@ -117,6 +117,10 @@ body {
 		@include adaptiv-value("padding-top", 20, 0, 0);
 		@include adaptiv-value("padding-bottom", 100, 40, 0);
 	}
+	&__plan {
+		@include adaptiv-value("padding-top", 180, 40, 0);
+		@include adaptiv-value("padding-bottom", 180, 40, 0);
+	}
 }
 //===================================================================================================================================
 .intro {
@@ -553,6 +557,195 @@ body {
 		text-transform: uppercase;
 		font-size: 12px;
 		line-height: math.div(22, 12) * 100%;
+	}
+}
+//====================================================================================================
+.plan {
+	background-color: #f4f4f5;
+	&__body {
+		@media (min-width: 1050px) {
+			display: grid;
+			align-items: center;
+			@include adaptiv-value("column-gap", 98, 0, 1);
+			grid-template-columns: 1fr 680px;
+		}
+	}
+	&__content {
+		@media (max-width: 1050px) {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+	&__title {
+		margin: 0px 0px math.div(55, 42) * 1em 0px;
+	}
+	&__text {
+		color: $grayColor;
+		font-size: 20px;
+		line-height: math.div(28, 20) * 100%;
+		margin: 0px 0px math.div(35, 20) * 1em 0px;
+	}
+	&__team {
+		color: $grayColor;
+		font-size: 14px;
+		line-height: math.div(24, 14) * 100%;
+		a {
+			color: $blueColor;
+			text-decoration: underline;
+		}
+	}
+	&__cards {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		@media (max-width: 1050px) {
+			align-items: stretch;
+			justify-content: space-evenly;
+		}
+		@media (max-width: 600px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+.checkbox-plan {
+	max-width: 260px;
+	@include adaptiv-value("margin-bottom", 70, 30, 1);
+	&__change {
+		font-weight: 900;
+		font-size: 15px;
+		text-transform: uppercase;
+		margin: 0px 0px 1em 0px;
+	}
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		border: 1px solid #bfc1c2;
+		border-radius: 25px;
+		height: 50px;
+		padding: 3px;
+		position: relative;
+	}
+	&__input {
+		display: none;
+	}
+	&__label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 5;
+		text-align: center;
+		cursor: pointer;
+		font-weight: 700;
+		color: rgba($mainColor, 0.4);
+		transition: all 0.3s ease 0s;
+		&._active {
+			color: $mainColor;
+		}
+	}
+	&__bg {
+		content: "";
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		width: 50%;
+		height: calc(100% - 6px);
+		border-radius: 21px;
+		background-color: #fff;
+		box-shadow: 2px 5px 20px 0px rgba(61, 61, 62, 0.15), 10px 28px 50px 0px rgba(92, 95, 101, 0.28);
+		transition: all 0.2s ease 0s;
+		&._active {
+			left: calc(50% - 3px);
+		}
+	}
+}
+.card-plan {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 0 1 340px;
+	min-height: 510px;
+	background-color: #ebebed;
+	border-radius: 10px;
+	padding: 35px 50px 50px 50px;
+	transition: all 0.3s ease 0s;
+	text-align: center;
+	@media (max-width: $md2+px) {
+		padding: 30px 15px;
+	}
+	@media (max-width: 600px) {
+		flex: 1 1 100%;
+		&:first-child {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	&._active {
+		background-color: #fff;
+		box-shadow: 10px 28px 50px 0px rgba(92, 95, 101, 0.2);
+	}
+	&__head {
+		text-align: center;
+		margin: 0px 0px 55px 0px;
+	}
+	&__name {
+		font-size: 32px;
+		line-height: math.div(38, 32) * 100%;
+		margin: 0px 0px math.div(25, 32) * 1em 0px;
+	}
+	&__price {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 28px;
+		padding: 0px 15px;
+		text-transform: uppercase;
+		border: 1px solid #c4c4c6;
+		border-radius: 14px;
+		font-weight: 900;
+		font-size: 11px;
+		line-height: math.div(22, 11) * 100%;
+	}
+	&__info {
+		flex: 1 1 auto;
+		margin: 0px 0px 45px 0px;
+	}
+	&__text {
+		max-width: 180px;
+		color: $grayColor;
+		font-size: 20px;
+		line-height: math.div(28, 20) * 100%;
+		margin: 0px auto math.div(35, 20) * 1em auto;
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: inherit;
+		font-weight: 700;
+		font-size: 16px;
+		padding: 5px 0px;
+		line-height: math.div(24, 16) * 100%;
+		&::before {
+			padding: 0px 10px 0px 0px;
+			color: $greenColor;
+		}
+		&:not(:last-child) {
+			margin: 0px 0px math.div(5, 16) * 1em 0px;
+		}
+	}
+	&__button {
+		min-height: 42px;
+		padding: 0px 60px;
+		border-radius: 21px;
+		color: $blueColor;
+		border: 1px solid $blueColor;
+		@media (max-width: 600px) {
+			width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: $blueColor;
+			}
+		}
 	}
 }
 //====================================================================================================
